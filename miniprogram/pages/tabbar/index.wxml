@@ -1,0 +1,11 @@
+<!--pages/tabbar/index.wxml-->
+<import src="../common/head.wxml"/>
+<import src="../common/foot.wxml"/>
+
+<view>
+  <template is="head" data="{{ title: 'index' }}"></template>
+
+
+
+  <template is="foot"></template>
+</view>

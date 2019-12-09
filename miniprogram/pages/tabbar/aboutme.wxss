@@ -1,0 +1,17 @@
+/* pages/aboutme/aboutme.wxss */
+@import "../common/index.wxss";
+
+.username_nickname{
+  font-size: 32rpx;
+  color: #007aff;
+  background-color: white;
+  background-size: cover;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 10px;
+}
+
+.username_wrapper{
+  padding-left: 120rpx;
+}
+

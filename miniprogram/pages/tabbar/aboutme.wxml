@@ -1,0 +1,29 @@
+<!--pages/aboutme/aboutme.wxml-->
+<import src="../common/head.wxml" />
+<import src="../common/foot.wxml" />
+
+<view>
+  <template is="head" data="{{ title: 'main' }}"></template>
+  <view class="userinfo">
+    <view class="username_wrapper">
+      <image class="user_icon" style="width:50px; height:50px;" src="../../images/guanyuwo.png" mode="aspectFit"></image>
+
+      <text class="username_nickname">User_name</text>
+    </view>
+  </view>
+
+  <view class="container">
+    <block wx:for-items="{{ list }}" wx:key="{{ item.id }}">
+      <navigator url="../demo/demo" hover-class="navigator-hover">
+        <view class="kind-list-item">
+          <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}">
+            <view class="kind-list-text">{{item.name}}</view>
+            <image class="kind-list-img" src="../../images/guanyuwo.png"></image>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+
+  <template is="foot"></template>
+</view>
