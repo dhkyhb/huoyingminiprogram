@@ -1,11 +1,41 @@
 <!--pages/tabbar/index.wxml-->
-<import src="../common/head.wxml"/>
-<import src="../common/foot.wxml"/>
+<import src="../common/head.wxml" />
+<import src="../common/swiper-card.wxml" />
+<import src="../common/artical-card.wxml" />
+<import src="../common/foot.wxml" />
 
 <view>
-  <template is="head" data="{{ title: 'index' }}"></template>
+  <!-- 头部 -->
+  <view class="head">
+    <template is="head" data="{{ title: 'index' }}"></template>
+  </view>
 
+  <!-- 轮播 -->
+  <view class="swiper_head">
+    <template is="swiper" data="{{swiper}}"></template>
+  </view>
 
+  <!-- 中间item选项 -->
+  <view class="container">
+    <view class="group one">
+      <block wx:for-items="{{ index_list }}" wx:key="{{ item.id}}">
+        <view class="item">
+          <image src="{{ item.iconpath }}"></image>
+          <text>{{ item.name }}</text>
+        </view>
+      </block>
+    </view>
+    <view>
+      <block wx:for="{{ data }}" wx:key="{{ item.hashId }}">
+        <view class="newitem">
+          <template is="artical-card" data="{{item}}"></template>
+        </view>
+      </block>
+    </view>
+  </view>
 
-  <template is="foot"></template>
+  <!-- 底部 -->
+  <view class="foot">
+    <template is="foot"></template>
+  </view>
 </view>

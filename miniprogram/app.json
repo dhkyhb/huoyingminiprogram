@@ -2,7 +2,8 @@
   "pages": [
     "pages/tabbar/index",
     "pages/tabbar/aboutme",
-    "pages/demo/demo"
+    "pages/demo/demo",
+    "pages/artical-page/artical-page"
   ],
   "tabBar": {
     "custom": true,

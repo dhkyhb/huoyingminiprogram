@@ -1,0 +1,15 @@
+<template name="artical-card">
+  <view bindtap="navtoArticle">
+    <image wx:if="{{item.iconurl}}" class="poster" src="{{ item.iconurl }}"></image>
+    <image wx:else class="poster" src="../../images/hy-poster.jpg"></image>
+    <view class="meta">
+      <text class="title">{{item.content}}</text>
+      <view class="other clearfloat">
+        <view class="source">
+          <text class="detail">{{item.detail}}</text>
+        </view>
+        <text class="commentsall">{{item.commentsall}}</text>
+      </view>
+    </view>
+  </view>
+</template>

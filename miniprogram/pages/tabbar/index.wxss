@@ -1,2 +1,37 @@
 /* pages/tabbar/index.wxss */
 @import "../common/index.wxss";
+
+.head{
+  /* display: none 与visibility：hidden区别就是后者仍占用空间 */
+  display: none;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  list-style: none;
+  margin: 20rpx 0;
+}
+
+.group .item {
+  flex: 1 1 150rpx;
+  text-align: center;
+  padding-top: 20rpx;
+  border-right: 2rpx solid #f4f4f4;
+}
+
+.group .item image{
+  width: 75rpx;
+  height: 75rpx;
+}
+
+.group .item text{
+  margin-top: 10rpx;
+  display: block;
+  font-size: 32rpx;
+}
+
+.swiper_head{
+  line-height: 1;
+}
