@@ -106,7 +106,7 @@ Component({
     },
     navtoArticle(event) {
       console.log(event)
-
+      
     }
   }
 })
