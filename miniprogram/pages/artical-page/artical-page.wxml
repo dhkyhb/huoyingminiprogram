@@ -1,3 +1,20 @@
 <!--miniprogram/pages/artical-page/artical-page.wxml-->
-<loading>加载中......</loading>
 
+<scroll-view scroll-y=true>
+  <view>
+    <text class="title">{{ body.title }}</text>
+
+    <view>
+      <text class="content">{{ body.content }}</text>
+    </view>
+
+    <view>
+      <block wx:for="{{ body.contents }}">
+        <text>{{ item.title }}</text>
+        <image wx:if="{{ item.icon }}">{{ item.icon }}</image>
+      </block>
+    </view>
+
+    <view>{{ body.footer }}</view>
+  </view>
+</scroll-view>
